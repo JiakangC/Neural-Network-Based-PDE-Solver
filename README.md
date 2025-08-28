@@ -27,29 +27,28 @@ WAN introduces a second network that learns test functions to generate a weak fo
 
 
 ## Repository structure
-
-├── Data_process         # Scripts for analysing results and creating plots
-│   ├── plot.py          # Plot training losses and L2 errors; uses Matplotlib:contentReference[oaicite:8]{index=8}:contentReference[oaicite:9]{index=9}
-│   └── results_process.py  # Convert JSON log files to CSV for ablation studies
-├── Poisson_Equations    # Poisson equation solver (1‑D/2‑D)
-│   └── Poisson_1D.py    # Implements PINN/DRM/WAN training routine:contentReference[oaicite:10]{index=10}:contentReference[oaicite:11]{index=11}
-├── Schrodinger_Equations
-│   ├── Infinite_Potential_Well
-│   │   ├── IPW_1D_PINN_DRM.py
-│   │   ├── IPW_1D_WAN.py
-│   │   ├── IPW_1D_WAN_FN.py
-│   │   └── IPW_2D.py
-│   ├── Kramers_Henneberger
-│   │   └── KH_1D.py
-│   └── Quantum_Harmonic_Oscillator
-│       ├── QHO_1D_PINN_DRM.py
-│       ├── QHO_1D_WAN.py
-│       ├── QHO_2D.py
-│       └── QHO_2D_Energy.py
-├── Plots                # Figures illustrating network architectures and results
-│   ├── PINN_structure.png  # Schematic of a PINN (forward network and loss terms)
-│   ├── WAN_structure.png   # Schematic of the WAN method (primal/adversarial nets)
-│   ├── heatmap_errors.png  # Example heatmap of pointwise errors
-│   ├── l2_error_evolution_*.pdf # L2 error curves for KH/QHO problems
-│   └── loss_evolution_*.pdf    # Training loss curves for KH/QHO problems
-└── README.md            # You are here!
+```text
+Neural-Network-Based-PDE-Solver/
+├─ Data_process/
+│  ├─ plot.py
+│  └─ results_process.py
+├─ Poisson_Equations/
+│  └─ Poisson_1D.py
+├─ Schrodinger_Equations/
+│  ├─ Infinite_Potential_Well/
+│  │  ├─ IPW_1D_PINN_DRM.py
+│  │  ├─ IPW_1D_WAN.py
+│  │  ├─ IPW_1D_WAN_FN.py
+│  │  └─ IPW_2D.py
+│  ├─ Kramers_Henneberger/
+│  │  └─ KH_1D.py
+│  └─ Quantum_Harmonic_Oscillator/
+│     ├─ QHO_1D_PINN_DRM.py
+│     ├─ QHO_1D_WAN.py
+│     ├─ QHO_2D.py
+│     └─ QHO_2D_Energy.py
+├─ Plots/
+│  ├─ PINN_structure.png
+│  └─ WAN_structure.png
+├─ README.md
+└─ LICENSE
