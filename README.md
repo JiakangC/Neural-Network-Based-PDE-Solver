@@ -66,8 +66,30 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip setuptools wheel
 ```
+
+**Windows**
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip setuptools wheel
+```
 ### 2) Install Python dependencies
 ```bash
 pip install -r requirements.pip.txt
 
 ```
+
+## Usage
+
+The detailed usage is represented in sub folders for each questions
+
+## Results
+Scripts in the `Data_process` folder help analyse and visualise training logs. `results_process.py` converts JSON logs into CSV tables for ablation studies. 
+
+Here are some results used in my paper.
+
+## Contributing
+Contributions are welcome! If you extend the solver to other PDEs, improve the training routine or add new visualisations, feel free to open a pull request. Please accompany code changes with documentation and, where appropriate, update the README. For questions or suggestions, open an issue on GitHub.
+
+## License
+This project is released under the MIT License (see LICENSE).
