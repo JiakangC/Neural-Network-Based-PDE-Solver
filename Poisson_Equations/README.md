@@ -16,3 +16,16 @@ python Poisson_Equations/Poisson_ND.py
 ## Change hyperparameters
 
 Open `Poisson_ND.py` and edit the `__main__` block near the bottom:
+
+- methods = ['DRM', 'PINN', 'WAN']  &rarr choose methods to run.
+- dims = [2] &rarr spatial dimensions
+- epochs, lr, width, depth &rarr training schedule and model size.
+- n_interior, n_boundary, n_data &rarr sample sizes
+- bc_mode = 'FBC' or 'RB' &rarr fixed BC vs. residual-based BC
+
+## Outputs
+
+- `results/ND_Poisson/losses.npy`, `L2_errors.npy`
+- `results/ND_Poisson/results_poisson_nd.json` hyper-params, evaluation metrics
+- Check points for best models
+
