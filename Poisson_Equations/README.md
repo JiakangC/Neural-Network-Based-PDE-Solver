@@ -17,11 +17,11 @@ python Poisson_Equations/Poisson_ND.py
 
 Open `Poisson_ND.py` and edit the `__main__` block near the bottom:
 
-- methods = ['DRM', 'PINN', 'WAN']  &rarr choose methods to run.
-- dims = [2] &rarr spatial dimensions
-- epochs, lr, width, depth &rarr training schedule and model size.
-- n_interior, n_boundary, n_data &rarr sample sizes
-- bc_mode = 'FBC' or 'RB' &rarr fixed BC vs. residual-based BC
+- methods = ['DRM', 'PINN', 'WAN']  -> choose methods to run.
+- dims = [2] -> spatial dimensions
+- epochs, lr, width, depth -> training schedule and model size.
+- n_interior, n_boundary, n_data -> sample sizes
+- bc_mode = 'FBC' or 'RB' -> fixed BC vs. residual-based BC
 
 ## Outputs
 

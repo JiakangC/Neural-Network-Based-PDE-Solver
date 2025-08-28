@@ -20,7 +20,7 @@ WAN introduces a second network that learns test functions to generate a weak fo
 
 | Equation                              | Implementations                                      | Description                                                                                                                                                                                                                                                                               |
 | ------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Poisson equation**                  | `Poisson_Equations/Poisson_1D.py`                    | Solves `-Δu = f` on `[0,L]^d` with either Dirichlet or Neumann boundary conditions.  The script supports one or two dimensions and allows choice of method (`PINN`, `DRM` or `WAN`).  The code defines the residual and energy loss functions and trains the neural networks accordingly. |
+| **Poisson equation**                  | `Poisson_Equations/Poisson_ND.py`                    | Solves `-Δu = f` on `[0,L]^d` with either Dirichlet or Neumann boundary conditions.  The script supports one to five dimensions and allows choice of method (`PINN`, `DRM` or `WAN`).  The code defines the residual and energy loss functions and trains the neural networks accordingly. |
 | **Infinite potential well**           | `Schrodinger_Equations/Infinite_Potential_Well`      | Computes stationary states of the Schrödinger equation in a one‑ or two‑dimensional infinite square well.  Scripts are provided for PINN+DRM (`IPW_1D_PINN_DRM.py`), WAN (`IPW_1D_WAN.py`), WAN with finite‑norm regularisation (`IPW_1D_WAN_FN.py`) and a 2‑D solver (`IPW_2D.py`).      |
 | **Kramers–Henneberger (KH) equation** | `Schrodinger_Equations/Kramers_Henneberger/KH_1D.py` | Solves the time‑dependent Schrödinger equation in the Kramers–Henneberger frame.  The script includes an effective potential and uses the WAN formalism.                                                                                                                                  |
 | **Quantum harmonic oscillator (QHO)** | `Schrodinger_Equations/Quantum_Harmonic_Oscillator`  | Contains solvers for the 1‑D QHO using PINN/DRM (`QHO_1D_PINN_DRM.py`), WAN (`QHO_1D_WAN.py`) and 2‑D variants (`QHO_2D.py`, `QHO_2D_Energy.py`).  These scripts compute eigenfunctions and, in the energy versions, minimise the energy functional analogous to the Deep Ritz method.    |
@@ -87,6 +87,17 @@ The detailed usage is represented in sub folders for each questions
 Scripts in the `Data_process` folder help analyse and visualise training logs. `results_process.py` converts JSON logs into CSV tables for ablation studies. 
 
 Here are some results used in my paper.
+
+### 2D Infinite Potential Well
+This is the `FN` prediction.
+|<img src="plots/pinn_vs_exact_n=(3, 3)_PINN_FN.png" width="32%"> |<img src="plots/pinn_vs_exact_n=(3, 3)_DRM_FN.png" width="32%">  |<img src="plots/pinn_vs_exact_n=(3, 3)_WAN_FN.png" width="32%"> |
+
+### KH Potential Predictions
+
+| | |
+|---|---|
+| <img src="plots/predicted_wavefunction_n0_KH.png" width="48%"> | <img src="plots/predicted_wavefunction_n1_KH.png" width="48%"> |
+| <img src="plots/predicted_wavefunction_n2_KH.png"  width="48%"> | <img src="plots/predicted_wavefunction_n3_KH.png"  width="48%"> |
 
 ## Contributing
 Contributions are welcome! If you extend the solver to other PDEs, improve the training routine or add new visualisations, feel free to open a pull request. Please accompany code changes with documentation and, where appropriate, update the README. For questions or suggestions, open an issue on GitHub.
