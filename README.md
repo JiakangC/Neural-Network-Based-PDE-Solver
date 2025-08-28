@@ -90,14 +90,15 @@ Here are some results used in my paper.
 
 ### 2D Infinite Potential Well
 This is the `FN` prediction.
-|<img src="plots/pinn_vs_exact_n=(3, 3)_PINN_FN.png" width="32%"> |<img src="plots/pinn_vs_exact_n=(3, 3)_DRM_FN.png" width="32%">  |<img src="plots/pinn_vs_exact_n=(3, 3)_WAN_FN.png" width="32%"> |
+
+|<img src="Plots/pinn_vs_exact_n=(3, 3)_PINN_FN.png" width="32%"> |<img src="Plots/pinn_vs_exact_n=(3, 3)_DRM_FN.png" width="32%">  |<img src="Plots/pinn_vs_exact_n=(3, 3)_WAN_FN.png" width="32%"> |
 
 ### KH Potential Predictions
 
 | | |
 |---|---|
-| <img src="plots/predicted_wavefunction_n0_KH.png" width="48%"> | <img src="plots/predicted_wavefunction_n1_KH.png" width="48%"> |
-| <img src="plots/predicted_wavefunction_n2_KH.png"  width="48%"> | <img src="plots/predicted_wavefunction_n3_KH.png"  width="48%"> |
+| <img src="Plots/predicted_wavefunction_n0_KH.png" width="48%"> | <img src="Plots/predicted_wavefunction_n1_KH.png" width="48%"> |
+| <img src="Plots/predicted_wavefunction_n2_KH.png"  width="48%"> | <img src="Plots/predicted_wavefunction_n3_KH.png"  width="48%"> |
 
 ## Contributing
 Contributions are welcome! If you extend the solver to other PDEs, improve the training routine or add new visualisations, feel free to open a pull request. Please accompany code changes with documentation and, where appropriate, update the README. For questions or suggestions, open an issue on GitHub.
