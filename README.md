@@ -52,3 +52,22 @@ Neural-Network-Based-PDE-Solver/
 │  └─ WAN_structure.png
 ├─ README.md
 └─ LICENSE
+```
+
+## Installation (pip via `requirements.pip.txt`)
+
+> This uses a **pip-only** subset of the environment. It’s great for CPU or simple GPU setups.
+> If you need exact CUDA/driver versions or Conda-only packages, prefer `environment.yml`.
+
+### 1) Create and activate a virtual environment
+**Linux/macOS**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip setuptools wheel
+```
+### 2) Install Python dependencies
+```bash
+pip install -r requirements.pip.txt
+
+```
